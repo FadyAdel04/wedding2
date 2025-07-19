@@ -2,135 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wedding Invitation | Mohamed & Mennallah</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="shortcut icon" href="img/4.jpeg" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation | Mohamed & Mennallah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="shortcut icon" href="img/4.jpeg" type="image/x-icon">
+  <style>
+    #play-audio-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: linear-gradient(45deg, #ffb6c1, #98fb98);
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+    }
 
+    #play-audio-btn:hover {
+      background: linear-gradient(45deg, #ff85a2, #6ee27c);
+    }
+
+    @media (max-width: 576px) {
+      #play-audio-btn {
+        top: 15px;
+        right: 15px;
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <section class="invitation-section">
-        <div class="border-frame"></div>
-        <!-- Decorative Corners -->
-        <img data-aos="fade-up-right" data-aos-duration="2000" src="img/1.png" class="flower-top-left" alt="Decoration">
-        <img data-aos="fade-up-left" data-aos-duration="2000" style="rotate: 180deg;" src="img/1.png"
-            class="flower-bottom-right" alt="Decoration">
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="audio.mpeg" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-        <div class="invitation-content-wrapper">
-            <div class="smoke-background"></div>
+  <!-- Play/Pause Button -->
+  <button id="play-audio-btn">▶️ Play Music</button>
 
-            <div class="invitation-content text-center">
-                <p data-aos="fade-down" data-aos-duration="2000" class="small-text">You Are Invited To</p>
-                <h2 data-aos="fade-down" data-aos-duration="2000" class="main-title">WEDDING PARTY</h2>
-                <img data-aos="fade-up" data-aos-duration="2000" src="img/5.png" alt="Bride and Groom"
-                    class="bride-groom-img" />
-
-                <div data-aos="fade-up" data-aos-duration="2000" class="names-wrapper">
-                    <h3 class="names">Mohamed</h3>
-                    <h4 class="and-symbol">&</h4>
-                    <h3 class="names">Menna allah</h3>
-                </div>
-
-                <div data-aos="fade-up" data-aos-duration="2000" class="detail">
-                    <p class="details">Start At 7:00 Pm</p>
-                    <p class="details">14 August, 2025</p>
-                    <p class="details">dar el-moshah | al fayrouz-Hall</p>
-                </div>
-            </div>
+  <section class="invitation-section">
+    <div class="border-frame"></div>
+    <img data-aos="fade-up-right" data-aos-duration="2000" src="img/1.png" class="flower-top-left" alt="Decoration">
+    <img data-aos="fade-up-left" data-aos-duration="2000" style="rotate: 180deg;" src="img/1.png" class="flower-bottom-right" alt="Decoration">
+    <div class="invitation-content-wrapper">
+      <div class="smoke-background"></div>
+      <div class="invitation-content text-center">
+        <p data-aos="fade-down" data-aos-duration="2000" class="small-text">You Are Invited To</p>
+        <h2 data-aos="fade-down" data-aos-duration="2000" class="main-title">WEDDING PARTY</h2>
+        <img data-aos="fade-up" data-aos-duration="2000" src="img/5.png" alt="Bride and Groom" class="bride-groom-img" />
+        <div data-aos="fade-up" data-aos-duration="2000" class="names-wrapper">
+          <h3 class="names">Mohamed</h3>
+          <h4 class="and-symbol">&</h4>
+          <h3 class="names">Menna allah</h3>
         </div>
-    </section>
-
-    <section class="counter">
-        <div class="border-frame"></div>
-
-        <img data-aos="fade-right" data-aos-duration="2000" src="img/6.png" alt="Join Us Image" class="counter-img">
-
-        <div data-aos="fade-left" data-aos-duration="2000" class="counter-content">
-            <h2 class="counter-title">JOIN US</h2>
-            <p class="counter-text">
-                for a day filled with love, laughter, and cherished
-                moments as we celebrate the beginning of our
-                forever.
-            </p>
-
-            <script>(function (d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script>
-
-            <div class="tickcounter-container">
-                <a data-type="countdown" data-id="7706972" class="tickcounter"
-                    style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;"
-                    title="My countdown" href="//www.tickcounter.com/">My countdown</a>
-                <img src="img/10.png" alt="Flower decoration" class="tickcounter-flower">
-
-            </div>
+        <div data-aos="fade-up" data-aos-duration="2000" class="detail">
+          <p class="details">Start At 7:00 Pm</p>
+          <p class="details">14 August, 2025</p>
+          <p class="details">dar el-moshah | al fayrouz-Hall</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
+  <section class="counter">
+    <div class="border-frame"></div>
+    <img data-aos="fade-right" data-aos-duration="2000" src="img/6.png" alt="Join Us Image" class="counter-img">
+    <div data-aos="fade-left" data-aos-duration="2000" class="counter-content">
+      <h2 class="counter-title">JOIN US</h2>
+      <p class="counter-text">for a day filled with love, laughter, and cherished moments as we celebrate the beginning of our forever.</p>
+      <script>
+        (function (d, s, id) {
+          var js, pjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//www.tickcounter.com/static/js/loader.js";
+          pjs.parentNode.insertBefore(js, pjs);
+        }(document, "script", "tickcounter-sdk"));
+      </script>
+      <div class="tickcounter-container">
+        <a data-type="countdown" data-id="7706972" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="My countdown" href="//www.tickcounter.com/">My countdown</a>
+        <img src="img/10.png" alt="Flower decoration" class="tickcounter-flower">
+      </div>
+    </div>
+  </section>
 
-
-    <section class="banner-section">
-        <div class="border-frame"></div>
-
-        <div class="banner-content-wrapper">
-
-            <div class="banner-content text-center">
-                <h2 data-aos="fade-down" data-aos-duration="2000" class="banner-message">A heartfelt invitation to our
-                    special day <br> – we can’t wait to celebrate with you</h2>
-                <div class="full-width-image-container">
-                    <img data-aos="fade-up" data-aos-duration="2000" src="img/9.jpeg" alt="Couple photo"
-                        class="full-width-image">
-                </div>
-            </div>
+  <section class="banner-section">
+    <div class="border-frame"></div>
+    <div class="banner-content-wrapper">
+      <div class="banner-content text-center">
+        <h2 data-aos="fade-down" data-aos-duration="2000" class="banner-message">
+          A heartfelt invitation to our special day <br> – we can’t wait to celebrate with you
+        </h2>
+        <div class="full-width-image-container">
+          <img data-aos="fade-up" data-aos-duration="2000" src="img/9.jpeg" alt="Couple photo" class="full-width-image">
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="location-section">
-        <div class="location-container">
-            <div class="border-frame"></div>
-            <!-- Left: Event Details -->
-            <div data-aos="fade-right" data-aos-duration="2000" class="location-details">
-                <h2 class="location-title">Bear witness to<br />our special day</h2>
-
-                <div class="event-info">
-                    <h3 class="info-heading">🕕 Time</h3>
-                    <p class="info-text">Start At 7:00 PM</p>
-                </div>
-
-                <div class="event-info">
-                    <h3 class="info-heading">📅 Date</h3>
-                    <p class="info-text">14 August, 2025</p>
-                </div>
-
-                <div class="event-info">
-                    <h3 class="info-heading">📍 Venue</h3>
-                    <p class="info-text">al fayrouz</p>
-                </div>
-            </div>
-
-            <!-- Right: Map Embed -->
-            <div data-aos="fade-left" data-aos-duration="2000" class="location-map-wrapper">
-                <img src="img/1.png" alt="Flower decoration" class="map-flower top-left" />
-
-                <iframe class="google-map" src="https://www.google.com/maps?q=30.0771356,31.3021463&output=embed"
-                    allowfullscreen="" loading="lazy"></iframe>
-
-                <a href="https://www.google.com/maps/place/%D9%82%D8%A7%D8%B9%D9%87+%D8%A7%D9%84%D9%81%D9%8A%D8%B1%D9%88%D8%B2%E2%80%AD/@30.0732921,31.3061167,17z/data=!4m6!3m5!1s0x14583fc95eb5616d:0xc32f7aec93060dcc!8m2!3d30.0727072!4d31.3051189!16s%2Fg%2F11s5czj055?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank" class="open-location-btn">
-                    <span>📍 Open Location</span>
-                </a>
-            </div>
-
+  <section class="location-section">
+    <div class="location-container">
+      <div class="border-frame"></div>
+      <div data-aos="fade-right" data-aos-duration="2000" class="location-details">
+        <h2 class="location-title">Bear witness to<br />our special day</h2>
+        <div class="event-info">
+          <h3 class="info-heading">🕕 Time</h3>
+          <p class="info-text">Start At 7:00 PM</p>
         </div>
-    </section>
-</body>
-<script>
+        <div class="event-info">
+          <h3 class="info-heading">📅 Date</h3>
+          <p class="info-text">14 August, 2025</p>
+        </div>
+        <div class="event-info">
+          <h3 class="info-heading">📍 Venue</h3>
+          <p class="info-text">al fayrouz</p>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="2000" class="location-map-wrapper">
+        <img src="img/1.png" alt="Flower decoration" class="map-flower top-left" />
+        <iframe class="google-map" src="https://www.google.com/maps?q=30.0771356,31.3021463&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <a href="https://www.google.com/maps/place/قاعة+الفيروز" target="_blank" class="open-location-btn">
+          <span>📍 Open Location</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
     AOS.init();
-</script>
+    const audio = document.getElementById('bg-music');
+    const playButton = document.getElementById('play-audio-btn');
+    let isPlaying = false;
+
+    playButton.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+        playButton.innerHTML = '▶️ Play Music';
+      } else {
+        audio.play();
+        playButton.innerHTML = '⏸️ Pause Music';
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+</body>
 
 </html>
